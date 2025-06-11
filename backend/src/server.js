@@ -11,6 +11,9 @@ const PORT = process.env.PORT || 5001
 
 connectDB()
 
+// middleware
+app.use(express.json()) // para poder Destructurar datos/valores de req.body
+
 app.use("/api/notes", notesRoutes)
 
 app.listen(PORT, () => {
